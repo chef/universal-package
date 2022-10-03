@@ -1,0 +1,8 @@
+---
+pipelines:
+  - omnibus/release:
+      definition: .expeditor/release.omnibus.yml
+  - omnibus/adhoc:
+      definition: .expeditor/release.omnibus.yml
+      env:
+        - ADHOC: true
