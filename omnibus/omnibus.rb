@@ -13,7 +13,7 @@
 #
 # Uncomment this line to change the default base directory to "local"
 # -------------------------------------------------------------------
-base_dir './local'
+# base_dir './local'
 #
 # Alternatively you can tune the individual values
 # ------------------------------------------------
@@ -26,16 +26,16 @@ base_dir './local'
 
 # Disable git caching
 # ------------------------------
-use_git_caching false
+use_git_caching true
 
 # Enable S3 asset caching
 # ------------------------------
-# use_s3_caching true
-# s3_access_key    ENV['AWS_ACCESS_KEY_ID']
-# s3_secret_key    ENV['AWS_SECRET_ACCESS_KEY']
+use_s3_caching true
+s3_access_key  ENV["AWS_ACCESS_KEY_ID"]
+s3_secret_key  ENV["AWS_SECRET_ACCESS_KEY"]
+s3_bucket      "opscode-omnibus-cache"
 # s3_profile       ENV['AWS_S3_PROFILE']
 # s3_iam_role_arn  ENV['S3_IAM_ROLE_ARN']
-# s3_bucket        ENV['AWS_S3_BUCKET']
 
 # Customize compiler bits
 # ------------------------------
