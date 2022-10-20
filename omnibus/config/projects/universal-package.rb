@@ -22,3 +22,10 @@ dependency "package-creator"
 
 exclude "**/.git"
 exclude "**/bundler/git"
+
+package :pkg do
+  identifier "com.getchef.pkg.universal-chef-client"
+  signing_identity "Chef Software, Inc. (EU3VF8YLX2)"
+end
+
+compress :dmg
