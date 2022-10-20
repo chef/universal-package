@@ -25,8 +25,5 @@ skip_transitive_dependency_licensing true
 build do
   block "Download and unwrap architecture specific packages" do
     system "../creator/create_universal_pkg.sh"
-    system "mkdir -p #{install_dir}"
-    system "cp ./stage/* #{install_dir}"
-    system "echo Hello!"
   end
 end

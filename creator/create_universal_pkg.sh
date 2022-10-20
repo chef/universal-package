@@ -22,3 +22,6 @@ hdiutil detach -quiet /Volumes/Chef\ Infra\ Client
 rm chef-18.0.92-1.arm64.dmg
 
 popd
+
+mkdir -p /opt/universal-package/chef-pkgs
+cp ./stage/* /opt/universal-package/chef-pkgs/
