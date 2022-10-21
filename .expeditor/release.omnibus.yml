@@ -3,6 +3,6 @@ project-name: universal-package
 config: omnibus/omnibus.rb
 test-path: omnibus/omnibus-test.sh
 builder-to-testers-map:
-  mac_os_x-11-x86_64:
+  mac_os_x-11-arm64:
     - mac_os_x-11-arm64
     - mac_os_x-11-x86_64

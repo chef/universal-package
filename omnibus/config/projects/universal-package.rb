@@ -8,7 +8,7 @@ name "universal-package"
 maintainer "Progress Software, Inc."
 homepage "https://chef.io"
 
-install_dir "#{default_root}/#{name}"
+install_dir "/tmp/chef-pkgs"
 
 build_version Omnibus::BuildVersion.semver
 build_iteration 1

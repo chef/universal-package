@@ -14,10 +14,10 @@ error_exit()
 
 if [ `uname -m` == 'x86_64' ]
 then
-  installer -pkg /opt/universal-package/chef-pkgs/chef-18.0.92-1.x86_64.pkg -target LocalSystem -verbose
+  installer -pkg /tmp/chef-pkgs/chef-18.0.92-1.x86_64.pkg -target LocalSystem -verbose
 elif [ `uname -m` == 'arm64' ]
 then
-  installer -pkg /opt/universal-package/chef-pkgs/chef-18.0.92-1.arm64.pkg -target LocalSystem -verbose
+  installer -pkg /tmp/chef-pkgs/chef-18.0.92-1.arm64.pkg -target LocalSystem -verbose
 fi
 
 echo "Thank you for installing universal-package!"
