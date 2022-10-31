@@ -37,6 +37,10 @@ s3_bucket      "opscode-omnibus-cache"
 s3_profile       ENV['AWS_S3_PROFILE']
 s3_iam_role_arn  ENV['S3_IAM_ROLE_ARN']
 
+# Disable health check, as there are no libraries to scan
+# ------------------------------
+health_check false
+
 # Customize compiler bits
 # ------------------------------
 # solaris_compiler 'gcc'
