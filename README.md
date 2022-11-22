@@ -1,14 +1,22 @@
-# MY PROJECT
-Include badges for your CI system and and package repositories such as RubyGems so the community can easily see the released version.
+# Universal Package
 
-Give a brief description of what the repository contains. What this application or library. Sell it.
+This is an [omnibus](https://github.com/chef/omnibus) project set up to create a MacOS Universal installer for [Chef Infra Client](https://www.chef.io/downloads/tools/infra-client).
 
 ## Requirements
 
-Are there any runtimes or other software required to use this application. List them out including their versions
+The project needs to be built on macOS Intel or ARM system.
+
 ## Getting Started
 
-How does someone use the library or application. This may just be a link to a docs site. That's fine.
+1. Clone this repository to your workspace
+1. Make sure you have Ruby installed on your system.
+1. Update omnibus [configuration](https://github.com/chef/universal-package/blob/main/omnibus/omnibus.rb) to build locally. 
+    * Uncomment `base_dir './local'`
+    * Set `use_s3_caching` to `false`
+    * Update `install_dir` to `"/tmp/#{name}"` in project [configuration](https://github.com/chef/universal-package/blob/main/omnibus/config/projects/universal-package.rb) if you cannot run `omnibus build universal-package` with `sudo`
+1. Change directory `cd omnibus`
+1. Run `omnibus build universal-package`
+1. The wrapper installer will be created in `universal-package/pkg` folder.
 
 
 ## License
